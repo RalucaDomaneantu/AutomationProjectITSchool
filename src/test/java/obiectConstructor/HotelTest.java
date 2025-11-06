@@ -27,8 +27,5 @@ public class HotelTest {
         Regina.calculPretCamera();
         System.out.println(" ");
 
-
-
     }
-
 }
