@@ -10,6 +10,13 @@ public class Persoana {
     //Mostenirea se declara la nivel de clasa folosind keyword-ul "extends";
     //In Java o clasa poate mosteni doar o singura alta clasa(mostenire unica).
 
+    //polimorfismul - conceptul prin care o metoda poate avea implementari diferite;
+    //Polimorfismul poate fi de 2 feluri: -STATIC(OVERLOAD);
+    //                                    -DINAMIC(OVERRIDE);
+
+    //Dinamic- intr-o ierarhie de clase obtinute prin mostenire, o metoda poate avea implementari diferite;
+    //POlimorfismul dinamic se regaseste doar atunci cand exista mostenire;
+
     private String nume;
     private String prenume;
     private int varsta;
@@ -28,6 +35,17 @@ public class Persoana {
         System.out.println("Varsta persoanei este " + varsta);
         System.out.println("Adresa persoanei este " + adresa);
     }
+
+    //Polimorfismul DINAMIC
+    public void mananca(){
+        System.out.println("Persoana mananca atunci cand ii este foame");
+    }
+
+    //getter ne da valoarea proprietatii;
+    //setter modifica valoarea proprietatii;
+    //recomandat ar fi sa pornim intotdeauna cu private pentru a proteja datele, apoi expunem ce si cat avem nevoie;
+    //getter-se fac tot timpul pentru a putea citi valorile;
+    //setter - trebuie sa ne gandim daca face sens sa fie modificat;
 
     public String getNume() {
         return nume;
