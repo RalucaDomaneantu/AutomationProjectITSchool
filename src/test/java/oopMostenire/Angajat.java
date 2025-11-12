@@ -1,6 +1,6 @@
 package oopMostenire;
 
-public class Angajat extends Persoana {
+public class Angajat extends Persoana implements AngajatInterface {
     private String firma;
     private double salariu;
     private String contract;
@@ -13,31 +13,33 @@ public class Angajat extends Persoana {
         this.contract = contract;
         this.zileLibere = zileLibere;
     }
-    public void infoAngajat(){
+
+    public void infoAngajat() {
         infoPersoana();
         System.out.println("Firma la care lucreaza angajatul este " + firma);
-        System.out.println("Salariul angajatului este " +salariu);
+        System.out.println("Salariul angajatului este " + salariu);
         System.out.println("Perioda contractului este " + contract);
         System.out.println("Cate zile libere are angajatul? " + zileLibere);
     }
 
-    public void mananca(){
+    public void mananca() {
         System.out.println("Angajatul mananca atunci cand are pauza");
     }
 
     //Polimorfism STATIC
 
     //Metoda fara parametrii
-    public void afiseazaDetalii(){
+    public void afiseazaDetalii() {
         System.out.println("Afisez toti angajatii din companie");
     }
 
     //Afisam detalii dupa departament
-    public void afiseazaDetalii (String firma){
-        System.out.println("Afisez angajatii din departamentul: "+firma);
+    public void afiseazaDetalii(String firma) {
+        System.out.println("Afisez angajatii din departamentul: " + firma);
     }
-    public void afiseazaDetalii(String firma, boolean contract){
-        System.out.println("Afisez angajatii din: "+ firma + "Cu contract pe perioada determinata" + contract);
+
+    public void afiseazaDetalii(String firma, boolean contract) {
+        System.out.println("Afisez angajatii din: " + firma + "Cu contract pe perioada determinata" + contract);
     }
 
     public String getFirma() {
@@ -66,5 +68,20 @@ public class Angajat extends Persoana {
 
     public void setZileLibere(int zileLibere) {
         this.zileLibere = zileLibere;
+    }
+
+    @Override
+    public void ajungeLaTimpLaBirou() {
+        System.out.println("Angajatul trebuie sa ajunga la birou la 8 ");
+    }
+
+    @Override
+    public void munceste() {
+        System.out.println("Angajatul trebuie sa munceasca in intervalul 8-17");
+    }
+
+    @Override
+    public void respectaRegulamentulIntern() {
+        System.out.println("Angajatul trebuie sa respecte regulamentul intern");
     }
 }
